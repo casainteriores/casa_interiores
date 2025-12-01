@@ -1,0 +1,233 @@
+/* Hero */
+.page-hero {
+  background: var(--bg-soft);
+
+  .brand-mark {
+    font-size: clamp(2.2rem, 5vw, 3.6rem);
+    font-weight: 400;
+    letter-spacing: 0.6px;
+  }
+}
+
+.lead-hero {
+  font-size: clamp(1rem, 2.2vw, 1.15rem);
+  color: var(--muted);
+  max-width: 650px;
+}
+
+/* Chips KPI */
+.kpi {
+  border: 1px solid #e8e8ec;
+  border-radius: 999px;
+  padding: 0.5rem 1rem;
+  background: #fff;
+}
+
+/* Cartões */
+.section-card {
+  background: #fff;
+  border: 1px solid #ececf2;
+  border-radius: var(--radius);
+  box-shadow: 0 6px 18px rgba(20, 20, 20, 0.04);
+}
+
+/* Lista de checks */
+.check i {
+  font-size: 1.1rem;
+}
+
+/* Variação bege opcional – use <footer class="footer-min footer-min--beige"> */
+.footer-min {
+  background-color: #e9e0d4;
+  color: #2f2f2f;
+  padding: 3rem 0;
+
+  // --- Tipografia base ---
+  font-size: 0.95rem;
+  line-height: 1.6;
+
+  // --- Títulos ---
+  h6 {
+    font-weight: 600;
+    color: #1e1e1e;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+  }
+
+  // --- Parágrafos e listas ---
+  p,
+  li,
+  a {
+    color: #444;
+    transition: color 0.2s ease;
+  }
+
+  // --- Links ---
+  a {
+    text-decoration: none;
+
+    &:hover {
+      color: #000;
+    }
+  }
+
+  .politic {
+    text-decoration: underline;
+  }
+
+  .saiba {
+    color: var(--ink);
+  }
+  // --- Lista sem estilo padrão ---
+  ul {
+    padding-left: 0;
+    list-style: none;
+    margin-bottom: 0;
+  }
+
+  // --- Ícones (local, telefone, e-mail) ---
+  i {
+    color: #555;
+  }
+
+  // --- Botão CTA "Visite nossa loja" ---
+  .visit-store {
+    background-color: #fff;
+    color: #000;
+    padding: 0.6rem 1rem;
+    border-radius: 50px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease;
+
+    &:hover {
+      background-color: #000;
+      color: #fff;
+
+      .arrow {
+        transform: translateX(3px);
+      }
+    }
+
+    .arrow {
+      transition: transform 0.2s ease;
+    }
+  }
+
+  // --- Parte inferior (direitos e crédito) ---
+  .footer-bottom {
+    color: #666;
+
+    p {
+      margin-bottom: 0;
+    }
+
+    a {
+      color: #555;
+
+      &:hover {
+        color: #000;
+      }
+    }
+  }
+
+  // --- Responsividade ---
+  @media (max-width: 768px) {
+    text-align: center;
+
+    .row {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .col-12,
+    .col-md-4,
+    .col-md-2,
+    .col-md-3 {
+      width: 100%;
+      max-width: 400px;
+    }
+
+    .visit-store {
+      justify-content: center;
+      margin-top: 1rem;
+    }
+
+    .d-flex {
+      flex-direction: column !important;
+      align-items: center;
+      gap: 1rem;
+    }
+  }
+}
+
+/* CTA “Visite nossa loja” */
+.visit-store-wrap {
+  /* linha suave acima para separar do bloco */
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  padding-top: 1rem;
+}
+
+.visit-store {
+  font-weight: 600;
+  line-height: 1;
+  padding: 0.75rem 1rem;
+  border-radius: 999px;
+  border: 1px solid #d9d4cc;
+  background: rgba(255, 255, 255, 0.65);
+  color: var(--ink);
+  text-decoration: none;
+
+  /* animação */
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+
+  .arrow {
+    transition: transform 0.25s ease;
+  }
+
+  &:hover {
+    transform: translateX(6px);
+    box-shadow: 0 8px 24px rgba(20, 20, 20, 0.08);
+    border-color: #cfc7bd;
+
+    .arrow {
+      transform: translateX(4px);
+    }
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+  }
+}
+
+/* Conteúdo mais legível */
+.content-wrap {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 1rem 0;
+
+  @media (min-width: 768px) {
+    padding: 1.5rem 0;
+  }
+}
+
+/* Respiro lateral nos cards sobre */
+.cards-about {
+  padding-left: 1.25rem !important;
+  padding-right: 1.25rem !important;
+
+  @media (min-width: 768px) {
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+  }
+}

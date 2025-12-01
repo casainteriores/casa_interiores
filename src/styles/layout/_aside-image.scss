@@ -1,0 +1,36 @@
+.product-aside {
+  position: fixed;
+  inset: 0;
+  z-index: 1080;
+  display: none;
+
+  &.is-open {
+    display: block;
+  }
+
+  &__backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(2px);
+  }
+
+  &__panel {
+    position: absolute;
+    inset: 0;
+    background: #fff; // tela branca inteira
+    padding: 1.5rem;
+    overflow-y: auto;
+  }
+
+  &__close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    border: 0;
+    background: transparent;
+    font-size: 1.6rem;
+    line-height: 1;
+    cursor: pointer;
+  }
+}

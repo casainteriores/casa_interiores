@@ -1,0 +1,15 @@
+.cats-bar {
+  background: var(--beige);
+  border-bottom: 1px solid var(--stroke);
+  a {
+    color: #222;
+    text-decoration: none;
+    font-weight: 500;
+    &:hover {
+      color: #ffffff;
+    }
+  }
+  .nav-link {
+    padding: 0.85rem 1rem;
+  }
+}

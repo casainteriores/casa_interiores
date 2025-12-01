@@ -1,0 +1,160 @@
+/* ===================== */
+/* Sidebar geral         */
+/* ===================== */
+.sidebar {
+  position: sticky;
+  top: 88px; /* cola abaixo do topo */
+  align-self: flex-start; /* garante altura só do conteúdo */
+}
+
+.side-card {
+  background: var(--paper);
+  border: 1px solid var(--stroke);
+  border-radius: var(--radius-xl);
+  padding: 1rem;
+  box-shadow: var(--shadow);
+}
+
+/* ===================== */
+/* Links de categorias    */
+/* ===================== */
+.cat-link {
+  display: block;
+  color: #333;
+  padding: 0.45rem 0.25rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  transition: background 0.15s ease;
+
+  &:hover {
+    background: #f0f0f0;
+  }
+}
+
+.cat-link.active {
+  background: #eaeaea;
+  font-weight: 700;
+}
+
+/* ===================== */
+/* Títulos e elementos    */
+/* ===================== */
+.filter-title {
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.price-input {
+  width: 100%;
+  border: 1px solid var(--stroke);
+  border-radius: 0.75rem;
+  padding: 0.5rem 0.75rem;
+  background: var(--paper);
+}
+
+.form-check-input {
+  border-color: var(--stroke);
+
+  &:focus {
+    box-shadow: none;
+    border-color: var(--stroke);
+  }
+}
+
+.form-check-label {
+  color: var(--ink);
+
+  .text-muted {
+    color: var(--muted) !important;
+  }
+}
+
+.side-card hr {
+  margin: 1rem 0;
+  opacity: 1;
+  border-color: var(--stroke);
+}
+
+/* ===================== */
+/* Comportamento desktop  */
+/* ===================== */
+@media (min-width: 992px) {
+  .sidebar {
+    padding-right: 0.25rem;
+  }
+
+  /* Scroll ghost: invisível por padrão, aparece no hover */
+  #sidebarDesktop .sidebar-collapsible {
+    scrollbar-width: none; /* esconde no Firefox */
+  }
+
+  #sidebarDesktop .sidebar-collapsible::-webkit-scrollbar {
+    width: 0; /* invisível (Chrome/Edge/Safari) */
+    background: transparent;
+  }
+
+  #sidebarDesktop .sidebar-collapsible:hover {
+    scrollbar-width: thin; /* aparece minimal no Firefox */
+    scrollbar-color: rgba(0, 0, 0, 0.15) transparent;
+  }
+
+  #sidebarDesktop .sidebar-collapsible:hover::-webkit-scrollbar {
+    width: 4px; /* aparece fino no hover */
+  }
+
+  #sidebarDesktop .sidebar-collapsible:hover::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.15);
+    border-radius: 999px;
+  }
+
+  #sidebarDesktop .sidebar-collapsible:hover::-webkit-scrollbar-track {
+    background: transparent;
+  }
+}
+
+/* ===================== */
+/* Comportamento mobile   */
+/* ===================== */
+@media (max-width: 991.98px) {
+  .sidebar {
+    position: static;
+    top: auto;
+  }
+  .side-card {
+    box-shadow: none;
+  }
+}
+
+/* ===================== */
+/* Área colapsável (Ver +)*/
+/* ===================== */
+.sidebar-collapsible {
+  max-height: 260px; /* lista fechada */
+  overflow: hidden;
+  transition: max-height 0.25s ease;
+
+  &.is-open {
+    max-height: 80vh; /* abre sem quebrar layout */
+    overflow-y: auto; /* rola se realmente necessário */
+  }
+}
+
+/* Botão Ver mais / ver menos */
+.sidebar-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-top: 0.5rem;
+  font-weight: 600;
+  color: var(--ink);
+  text-decoration: none;
+  cursor: pointer;
+
+  .la-angle-down {
+    transition: transform 0.2s ease;
+  }
+
+  &[aria-expanded='true'] .la-angle-down {
+    transform: rotate(180deg);
+  }
+}

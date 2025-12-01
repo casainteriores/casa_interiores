@@ -1,0 +1,163 @@
+/* ====== Contact split ====== */
+:root {
+  --ci-ink: #2b2b2b;
+  --ci-muted: #6b6b6b;
+  --ci-accent: #a88b5b; /* ajuste se quiser */
+  --ci-border: #e7e0d6;
+}
+.contact-split {
+  border: 1px solid var(--ci-border);
+  border-radius: 20px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+}
+
+/* coluna do form */
+.contact-form-pane {
+  padding: clamp(1.25rem, 3vw, 2rem);
+}
+
+/* divisor vertical em md+ */
+@media (min-width: 768px) {
+  .contact-divider {
+    position: relative;
+  }
+  .contact-divider::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: -0.5px;
+    width: 1px;
+    background: var(--ci-border);
+  }
+}
+
+/* ====== Ícones sociais de contato ====== */
+.contact-social .contact-icon {
+  font-size: 1.8rem;
+  color: var(--ci-ink);
+  transition: all 0.25s ease;
+}
+
+.contact-social .contact-icon:hover {
+  color: var(--ci-accent);
+  transform: translateY(-3px);
+}
+
+.contact-social .contact-icon i {
+  display: inline-block;
+  line-height: 1;
+}
+
+/* mapa ocupa altura visual do bloco */
+/* map wrapper com borda/raio iguais ao restante */
+.contact-map-wrap {
+  border: 1px solid var(--ci-border);
+  border-radius: 16px;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+/* já existente */
+.contact-map-pane {
+  position: relative;
+  min-height: 560px;
+}
+.contact-map {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  filter: grayscale(35%);
+}
+
+/* ===== Mobile: mapa menor e centralizado ao final ===== */
+@media (max-width: 767.98px) {
+  /* tira a altura fixa e deixa card menor */
+  .contact-map-pane {
+    min-height: auto;
+    padding: 1rem 1rem 1.25rem;
+  }
+
+  /* centraliza e limita largura; usa proporção 4:3 */
+  .contact-map-wrap {
+    width: min(420px, 100%);
+    aspect-ratio: 4 / 3; /* controla altura do iframe */
+    margin: 0 auto; /* centraliza */
+  }
+
+  /* faz o iframe ocupar o wrapper proporcional */
+  .contact-map {
+    height: 100%;
+  }
+
+  /* remove o divisor vertical (já some pela grid, mas garantimos) */
+  .contact-divider::after {
+    display: none;
+  }
+}
+
+/* heading e microcopy */
+.contact-title {
+  font-weight: 400;
+  letter-spacing: 0.2px;
+}
+.contact-sub {
+  color: var(--ci-muted);
+}
+
+/* inputs mais suaves */
+.contact-form .form-control {
+  border-color: var(--ci-border);
+  border-radius: 12px;
+}
+.contact-form .form-control:focus {
+  outline: none;
+  box-shadow: none;
+  border-color: var(--ci-accent);
+}
+.contact-btn {
+  border-radius: 12px;
+  background: var(--ci-accent); /* cor do botão do mock; troque se quiser */
+  border: 0;
+  color: #fff;
+}
+.contact-btn:hover {
+  filter: brightness(0.95);
+  background: var(--ci-accent);
+  color: var(--ci-border);
+}
+.contact-btn:active {
+  background-color: var(--ci-accent) !important; /* mantém a cor principal */
+  border-color: var(--ci-accent) !important;
+  color: #fff !important; /* mantém contraste */
+  transform: scale(0.98); /* opcional: dá leve efeito de clique */
+}
+
+/* animação sutil ao entrar */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.contact-split {
+  animation: fadeUp 0.45s ease-out both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .contact-split {
+    animation: none;
+  }
+}
+
+/*Estilo da mensagem no textarea*/
+.message-field {
+  resize: none;
+  height: 130px;
+}

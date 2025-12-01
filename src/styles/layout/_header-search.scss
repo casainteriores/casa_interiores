@@ -1,0 +1,77 @@
+.search-wrap {
+  background: var(--paper);
+  border-bottom: 1px solid var(--stroke);
+}
+
+.search-input {
+  border: 1px solid var(--stroke);
+  border-radius: 999px;
+  padding: 0.8rem 1.1rem;
+  width: 100%;
+  &::placeholder {
+    color: var(--muted);
+  }
+}
+
+/* =============================
+   🔍 Input de busca
+============================= */
+/* Remove borda azul padrão ao focar */
+.search-input:focus,
+.search-input:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+  border-color: inherit !important;
+}
+
+/* =============================
+   🔗 Links da navbar (remove azul)
+============================= */
+.cats-bar .nav-link {
+  color: #2b2b2b; /* cor normal */
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+/* Hover */
+.cats-bar .nav-link:hover {
+  color: #a88b5b; /* tom quente elegante */
+}
+
+/* Foco (remove azul e borda) */
+.cats-bar .nav-link:focus,
+.cats-bar .nav-link:focus-visible,
+.cats-bar .nav-link:active {
+  outline: none !important;
+  box-shadow: none !important;
+  color: #a88b5b; /* mesmo tom do hover, mantém consistência */
+  text-decoration: none;
+}
+
+.btn-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--stroke);
+  background: var(--paper);
+}
+
+.logo {
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  text-transform: lowercase;
+  color: var(--brand);
+  span {
+    font-weight: 500;
+  }
+}
+
+.logo-left {
+  color: var(--golden);
+}
+
+.span-logo {
+  color: #1f1f1f;
+}

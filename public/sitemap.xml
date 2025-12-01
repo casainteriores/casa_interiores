@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+>
+
+  <!-- Home: palavra-chave principal -->
+  <url>
+    <loc>https://casainteriores.com/</loc>
+    <priority>1.0</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+
+  <!-- Sobre -->
+  <url>
+    <loc>https://casainteriores.com/sobre</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <!-- Contato -->
+  <url>
+    <loc>https://casainteriores.com/contato</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <!-- Política de privacidade -->
+  <url>
+    <loc>https://casainteriores.com/politica-e-privacidade</loc>
+    <priority>0.3</priority>
+    <changefreq>yearly</changefreq>
+  </url>
+
+</urlset>

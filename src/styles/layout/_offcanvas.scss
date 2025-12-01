@@ -1,0 +1,43 @@
+/* ===========================
+   Offcanvas – estilos gerais
+   =========================== */
+
+/* Não limite a largura globalmente */
+.offcanvas {
+  max-width: none; /* REMOVER o 88vw que estava travando */
+}
+
+/* Links e toggle dentro do menu (opcional) */
+.offcanvas .cat-link {
+  display: block;
+  padding: 0.875rem 0;
+  border-bottom: 1px solid var(--stroke);
+}
+
+.offcanvas .sidebar-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-top: 0.5rem;
+}
+
+/* ===========================
+   Largura por breakpoint
+   =========================== */
+
+/* Mobile (xs–lg): ocupar a tela toda */
+@media (max-width: 991.98px) {
+  #mobileFilters {
+    --bs-offcanvas-width: 100vw; /* full width */
+  }
+  .offcanvas-backdrop.show {
+    opacity: 0.3;
+  } /* opcional */
+}
+
+/* Desktop (lg+): se quiser um painel mais estreito, defina aqui */
+@media (min-width: 992px) {
+  #mobileFilters {
+    --bs-offcanvas-width: 420px; /* ex.: 420px no desktop */
+  }
+}
