@@ -3,7 +3,7 @@
   xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
 >
 
-  <!-- Home: palavra-chave principal -->
+  <!-- Home -->
   <url>
     <loc>https://casainteriores.com/</loc>
     <priority>1.0</priority>
@@ -12,21 +12,21 @@
 
   <!-- Sobre -->
   <url>
-    <loc>https://casainteriores.com/sobre</loc>
+    <loc>https://casainteriores.com/sobre.html</loc>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
 
   <!-- Contato -->
   <url>
-    <loc>https://casainteriores.com/contato</loc>
+    <loc>https://casainteriores.com/contato.html</loc>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
 
   <!-- Política de privacidade -->
   <url>
-    <loc>https://casainteriores.com/politica-e-privacidade</loc>
+    <loc>https://casainteriores.com/politica-e-privacidade.html</loc>
     <priority>0.3</priority>
     <changefreq>yearly</changefreq>
   </url>
