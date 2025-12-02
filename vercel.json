@@ -1,0 +1,10 @@
+{
+  "cleanUrls": true,
+  "rewrites": [
+    { "source": "/", "destination": "/index.html" },
+    { "source": "/sobre", "destination": "/sobre.html" },
+    { "source": "/contato", "destination": "/contato.html" },
+    { "source": "/politica-e-privacidade", "destination": "/politica-e-privacidade.html" }
+  ],
+  "trailingSlash": false
+}
