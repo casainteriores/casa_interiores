@@ -35,7 +35,7 @@
 **Responsável Técnico:** Pedro Henrique — CEO & Fundador  
 **Status do Projeto:** ✅ Finalizado e publicado  
 **Repositório Oficial:** [github.com/heinsoft/casa-interiores](https://github.com/HeinSoftCompany/casa_interiores_project_priv)  
-**Website Oficial:** [casainteriorespe.com.br](https://casainteriorespe.com.br)
+**Website Oficial:** [casainteriores.com](https://casainteriores.com)
 
 #### 📜 Descrição Executiva
 O projeto **Casa Interiores** foi desenvolvido pela **HeinSoft Company** com o objetivo de traduzir a essência do design rústico e contemporâneo da marca em uma presença digital elegante, funcional e de alto desempenho.  
