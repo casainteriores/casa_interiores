@@ -296,6 +296,6 @@ Responsável Técnico: _Pedro Henrique — CEO & Fundador_
 
 <h2 id="licenca">⚖️ Direitos Autorais</h2>
 
-© 2025 HeinSoft Company. Todos os direitos reservados.  
+© 2026 HeinSoft Company. Todos os direitos reservados.  
 Este projeto é de uso autorizado apenas pela Casa Interiores e pela HeinSoft.  
 Reprodução, redistribuição ou uso comercial não autorizado do código ou do layout é expressamente proibido.
